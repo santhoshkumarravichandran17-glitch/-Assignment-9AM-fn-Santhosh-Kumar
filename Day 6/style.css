@@ -1,0 +1,19 @@
+#name{
+    background-color: black;
+    color: blueviolet;
+    font-style: oblique;
+    font-size: medium;
+    border-style: dotted;
+}
+.Introduction{
+       color: brown;
+    background-color: blue;
+    font-style: oblique;
+    font-size: medium;
+}
+.last{
+        color: aqua;
+        background-color: blue;
+        font-size: medium;
+        font-style: oblique;
+}
