@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-6 (Login Page)</title>
+
+    <style>
+
+        form{
+            display: inline-block;
+            text-align: left;
+            background-color: rgb(98, 178, 212);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+
+        input[type="text"]{
+            border: 5px solid rgb(122, 122, 41);
+        }
+
+        input[type="password"]{
+            border: 5px solid rgb(18, 41, 213);
+        }
+
+        input[type="email"]{
+            border: 5px solid rgb(229, 17, 183);
+        }
+
+        input[type="date"]{
+            border: 5px solid rgb(138, 38, 38);
+        }
+
+        h1{
+            color: white;
+            background-color: crimson
+        }
+
+        body{ 
+            text-align: center;
+            border: 5px solid black;
+            padding: 5px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        input[type="submit"]:hover{
+            background-color: rgb(240, 11, 233);
+        }
+
+
+
+    </style>
+    
+</head>
+<body>
+    <h1>Login Page</h1>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" required><br><br>
+
+        <label for="DOB">DOB:</label>
+        <input type="date"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter your email" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter your password" required><br><br>
+
+        <label for="retry">Re-enter Password:</label>
+        <input type="password" placeholder="Re-enter your password" required><br><br>
+
+        <input type="submit"> <input type="reset">
+    </form>
+</body>
+</html>

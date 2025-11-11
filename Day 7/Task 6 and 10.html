@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Tasks (6-10)</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #a77070;
+      margin: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: rgb(4, 4, 14);
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #210d0d;
+      border-bottom: 2px solid #f4ec5c;
+      padding-bottom: 5px;
+      margin-top: 40px;
+    }
+
+    /* TASK 6 - Product Card */
+    .product-card {
+      width: 250px;
+      border: 2px solid #dbdade;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px 0;
+      background-color: white;
+      box-shadow: 0 2px 5px black;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .product-card p {
+      color: gray;
+      font-size: 14px;
+    }
+
+    .product-card button {
+      background-color: darkblue;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* TASK 7 - Login Box */
+    .login-box {
+      width: 300px;
+      background-color: white;
+      border: 2px solid gray;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 20px 0;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+    }
+
+    .login-box button {
+      width: 100%;
+      background-color: darkblue;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    /* TASK 8 - Profile Card */
+    .profile-card {
+      width: 300px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: white;
+      margin: 30px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-section {
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .profile-section:last-child {
+      border-bottom: none;
+    }
+
+    /* TASK 9 - Notification Box */
+    .alert-box {
+      border: 2px solid orange;
+      background-color: #fff3cd;
+      color: #856404;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+
+    /* TASK 10 - Four Box Layout */
+    .Four-boxes {
+      display: flex;
+      gap: 20px;
+    }
+
+    .Four-boxes div {
+      width: 150px;
+      height: 100px;
+      background-color: white;
+      border: 2px solid #333;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .box1 {
+      margin: 10px;
+      padding: 5px;
+    }
+
+    .box2 {
+      margin: 20px;
+      padding: 15px;
+    }
+
+    .box3 {
+      margin: 30px;
+      padding: 25px;
+    }
+
+    .box4 {
+      margin: 40px;
+      padding: 35px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Box Model Practice (Tasks 6–10)</h1>
+
+  <!-- TASK 6: Product Card -->
+  <h2>Task 6: Product Card</h2>
+  <div class="product-card">
+    <img src="./helmet ak.jpg" alt="Product Image">
+    <h3>Helmet</h3>
+    <p>A helmet is a protective covering for the head, designed to resist blows and protect the brain from injury.</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <!-- TASK 7: Login Box -->
+  <h2>Task 7: Login Form Box</h2>
+  <div class="login-box">
+    <h3>Login</h3>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+  </div>
+
+  <!-- TASK 8: Profile Card -->
+  <h2>Task 8: Profile Card</h2>
+  <div class="profile-card">
+    <div class="profile-section"><strong>Name:</strong> Santhosh Kumar</div>
+    <div class="profile-section"><strong>Role:</strong> Apprentice and Incharge in Medplus</div>
+    <div class="profile-section"><strong>Location:</strong> West mambalam, chennai</div>
+  </div>
+
+  <!-- TASK 9: Notification Box -->
+  <h2>Task 9: Notification Alert Box</h2>
+  <div class="alert-box">
+    Warning: Please check your connection before submitting the form.
+  </div>
+
+  <!-- TASK 10: 3-Box Layout -->
+  <h2>Task 10: Margin & Padding Differences</h2>
+  <div class="Four-boxes">
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="box3">Box 3</div>
+    <div class="box4">Box 4</div>
+  </div>
+</body>
+
+</html>

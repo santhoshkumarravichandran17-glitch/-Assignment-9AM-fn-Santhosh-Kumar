@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8 (Product List)</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: beige;
+            text-align: center;
+        }
+
+        h1{
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
+        img[ src$=".jpg"]{
+            border: 5px solid red;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+        }
+
+        input[type="button"] {
+            background-color: lightgreen;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            input[type="button"]:hover {
+      background-color: green;
+      color: white;
+    }
+
+    .product {
+      display: inline-block;
+      margin: 20px;
+      border: 2px solid gray;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Product List</h1>
+
+    <div class="product">
+        <img src="./cat food.jpg" alt="cat food">
+        <p>Cat Food - 250THB</p>
+        <input type="button" value="Buy now">
+
+    </div>
+    
+     <div class="product">
+    <img src="./dog food.jpg" alt="Dog Toy">
+    <p>Dog Toy - 150 THB</p>
+    <input type="button" value="Buy Now">
+  </div>
+
+  <div class="product">
+    <img src="./pet bed.jpg" alt="Pet Bed">
+    <p>Pet Bed - 450 THB</p>
+    <input type="button" value="Buy Now">
+  </div>
+
+
+
+</body>
+</html>
