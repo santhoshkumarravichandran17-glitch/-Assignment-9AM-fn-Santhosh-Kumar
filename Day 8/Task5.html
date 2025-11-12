@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Positioning Boxes</title>
+  <style>
+    body {
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .relative-box {
+      position: relative;
+      background-color: lightblue;
+      width: 150px;
+      height: 150px;
+      top: 20px;
+      left: 20px;
+    }
+    .absolute-box {
+      position: absolute;
+      background-color: lightgreen;
+      width: 150px;
+      height: 150px;
+      top: 100px;
+      left: 200px;
+    }
+    .fixed-box {
+      position: fixed;
+      background-color: lightcoral;
+      width: 150px;
+      height: 150px;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="relative-box">Relative</div>
+  <div class="absolute-box">Absolute</div>
+  <div class="fixed-box">Fixed</div>
+</body>
+</html>
