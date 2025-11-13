@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Page Layout</title>
+  <style>
+    .profile-container {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+    .profile-pic {
+      width: 200px;
+      text-align: center;
+    }
+    .profile-details {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .profile-details div {
+      background: #f0f0f0;
+      padding: 10px;
+    }
+    img {
+      width: 150px;
+      border-radius: 50%;
+    }
+    h2{
+        color: rgb(163, 27, 27);
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Profile Page Layout</h2>
+  <div class="profile-container">
+    <div class="profile-pic">
+      <img src="https://via.placeholder.com/150" alt="Profile">
+      <h3>santhosh</h3>
+    </div>
+    <div class="profile-details">
+      <div>📧 Email: santhoshkumar@gmail.com</div>
+      <div>📞 Phone: +91 987643210</div>
+      <div>📍 Location: Chennai,Tamil Nadu</div>
+      <div>💼 Role: Full Stack Web Developer</div>
+    </div>
+  </div>
+</body>
+</html>

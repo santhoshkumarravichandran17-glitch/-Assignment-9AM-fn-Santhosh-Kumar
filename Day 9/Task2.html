@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Float and Clearfix Example</title>
+    <style>
+        .container {
+            border: 2px solid gray;
+            padding: 10px;
+        }
+
+        .container img {
+            float: left;
+            margin-right: 10px;
+            width: 150px;
+            height: 100px;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Float + Clearfix Example</h2>
+    <div class="container clearfix">
+        <img src="https://via.placeholder.com/150" alt="Sample">
+        <p>This is an example of floating an image beside text. The clearfix ensures that the container adjusts its
+            height properly even when elements are floated.</p>
+    </div>
+</body>
+
+</html>
