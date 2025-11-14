@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 2 - Float Example</title>
+  <style>
+    .clearfix::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    img {
+      width: 150px;
+      height: 100px;
+    }
+
+    .left {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .right {
+      float: right;
+      margin-left: 10px;
+    }
+    h3{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Task 2: Float Images Left and Right</h3>
+
+  <div class="clearfix">
+    <img src="https://via.placeholder.com/150" class="left">
+    <img src="https://via.placeholder.com/150" class="right">
+    <p>This paragraph flows between the two images. Clearfix helps to fix layout after floating elements.</p>
+  </div>
+
+</body>
+</html>

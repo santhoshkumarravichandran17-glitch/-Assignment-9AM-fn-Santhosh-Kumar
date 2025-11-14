@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "sidebar gallery"
+                "footer footer";
+            grid-template-columns: 200px 1fr;
+            gap: 10px;
+        }
+        header { grid-area: header; background: gray; color: white; padding: 20px; }
+        .sidebar { grid-area: sidebar; background: lightblue; padding: 20px; }
+        .main { grid-area: main; background: lightgreen; padding: 20px; }
+        .gallery { grid-area: gallery; background: peachpuff; padding: 20px; }
+        footer { grid-area: footer; background: black; color: white; padding: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <header>My Portfolio</header>
+    <div class="sidebar">About Me</div>
+    <div class="main">Projects</div>
+    <div class="gallery">Gallery Section</div>
+    <footer>Contact Info</footer>
+</div>
+
+</body>
+</html>

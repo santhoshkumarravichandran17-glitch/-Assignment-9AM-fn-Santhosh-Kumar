@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5 - Grid Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    header, footer {
+      grid-column: span 2;
+      background-color: teal;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .grid-item {
+      background-color: lightyellow;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Task 5: 2-Column Grid Layout</h3>
+
+  <div class="grid-container">
+    <header>Header</header>
+    <div class="grid-item">Column 1</div>
+    <div class="grid-item">Column 2</div>
+    <footer>Footer</footer>
+  </div>
+
+</body>
+</html>

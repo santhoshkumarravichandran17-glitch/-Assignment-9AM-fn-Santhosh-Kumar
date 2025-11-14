@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+        .left {
+            background: lightcoral;
+            padding: 20px;
+        }
+        .right {
+            background: lightgray;
+            padding: 20px;
+
+            /* Flexbox Inside Grid Cell */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .item {
+            background: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="grid">
+    <div class="left">Grid Left Side</div>
+    <div class="right">
+        <div class="item">Flex Item 1</div>
+        <div class="item">Flex Item 2</div>
+        <div class="item">Flex Item 3</div>
+    </div>
+</div>
+
+</body>
+</html>
