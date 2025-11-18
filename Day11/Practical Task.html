@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Grid Practical Tasks</title>
+
+  <style>
+
+    /* ------------------ Task 6: Basic Website Layout ------------------ */
+
+    .site-layout {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 70px 1fr 60px;
+      gap: 10px;
+      margin-bottom: 40px;
+    }
+
+    header { grid-area: header; background: #ddd; padding: 20px; }
+    aside  { grid-area: sidebar; background: #bbb; padding: 20px; }
+    main   { grid-area: content; background: #eee; padding: 20px; }
+    footer { grid-area: footer; background: #ccc; padding: 20px; }
+
+
+    /* ------------------ Task 7: Photo Gallery ------------------ */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+
+    /* ------------------ Task 8: Dashboard Layout ------------------ */
+
+    .dashboard {
+      display: grid;
+      grid-template-areas:
+        "nav nav"
+        "stats chart"
+        "table table";
+      grid-template-columns: 1fr 2fr;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .nav   { grid-area: nav; background: #ddd; padding: 20px; }
+    .stats { grid-area: stats; background: #eee; padding: 20px; }
+    .chart { grid-area: chart; background: #ccc; padding: 20px; }
+    .table { grid-area: table; background: #bbb; padding: 20px; }
+
+
+    /* ------------------ Task 9: Flexbox to Grid Comparison ------------------ */
+
+    .flex-example {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .flex-example div {
+      background: lightpink;
+      padding: 20px;
+      flex: 1;
+      text-align: center;
+    }
+
+    .grid-example {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .grid-example div {
+      background: lightyellow;
+      padding: 20px;
+      text-align: center;
+    }
+
+
+    /* ------------------ Task 10: Blog Homepage Layout ------------------ */
+
+    .blog {
+      display: grid;
+      grid-template-areas:
+        "blog-header blog-header"
+        "blog-sidebar blog-posts";
+      grid-template-columns: 250px 1fr;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .blog-header { grid-area: blog-header; background: #ddd; padding: 20px; }
+    .blog-sidebar { grid-area: blog-sidebar; background: #ccc; padding: 20px; }
+    .blog-posts { grid-area: blog-posts; background: #eee; padding: 20px; }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Grid Practical Tasks</h1>
+
+
+  <!-- Task 6 -->
+  <h2>Task 6: Basic Website Layout (Header, Sidebar, Content, Footer)</h2>
+  <div class="site-layout">
+    <header>Header</header>
+    <aside>Sidebar</aside>
+    <main>Content Section</main>
+    <footer>Footer</footer>
+  </div>
+
+
+  <!-- Task 7 -->
+  <h2>Task 7: Responsive Photo Gallery</h2>
+  <div class="gallery">
+    <img src="./Padmabhushan Ajithkumar ✨.jpg">
+    <img src="./Dhoni.jpg">
+    <img src="./Arnold.jpg">
+    <img src="./CR7.jpg">
+  </div>
+
+
+  <!-- Task 8 -->
+  <h2>Task 8: Dashboard Layout</h2>
+  <div class="dashboard">
+    <div class="nav">Navigation</div>
+    <div class="stats">Stats Panel</div>
+    <div class="chart">Chart Area</div>
+    <div class="table">Data Table</div>
+  </div>
+
+
+  <!-- Task 9 -->
+  <h2>Task 9: Convert Flexbox Layout into Grid</h2>
+
+  <h3>Before: Flexbox Layout</h3>
+  <div class="flex-example">
+    <div>Flex 1</div>
+    <div>Flex 2</div>
+    <div>Flex 3</div>
+  </div>
+
+  <h3>After: Grid Layout</h3>
+  <div class="grid-example">
+    <div>Grid 1</div>
+    <div>Grid 2</div>
+    <div>Grid 3</div>
+  </div>
+
+
+  <!-- Task 10 -->
+  <h2>Task 10: Blog Homepage Layout</h2>
+  <div class="blog">
+    <div class="blog-header">Blog Header</div>
+    <div class="blog-sidebar">Sidebar</div>
+    <div class="blog-posts">Posts Section</div>
+  </div>
+
+</body>
+</html>

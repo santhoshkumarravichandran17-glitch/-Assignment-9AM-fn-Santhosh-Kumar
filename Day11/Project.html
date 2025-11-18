@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Grid Project</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* MAIN GRID LAYOUT */
+        .container {
+            display: grid;
+            gap: 20px;
+            padding: 20px;
+
+            grid-template-areas:
+                "header"
+                "nav"
+                "hero"
+                "about"
+                "services"
+                "projects"
+                "testimonials"
+                "footer";
+        }
+
+        /* GRID AREAS */
+        .header { grid-area: header; background: #4CAF50; padding: 30px; color: white; text-align: center; }
+        .nav { grid-area: nav; background: #333; padding: 15px; }
+        .hero { grid-area: hero; background: #ddd; padding: 40px; text-align: center; }
+        .about { grid-area: about; background: #f2f2f2; padding: 30px; }
+        .services { grid-area: services; background: #fafafa; padding: 30px; }
+        .projects { grid-area: projects; padding: 30px; background: #ffffff; }
+        .testimonials { grid-area: testimonials; background: #fafafa; padding: 30px; }
+        .footer { grid-area: footer; background: #222; color: white; padding: 20px; text-align: center; }
+
+        /* NAV */
+        .nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        .nav li {
+            color: white;
+            font-size: 18px;
+        }
+
+        /* SERVICE GRID */
+        .service-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .box {
+            background: #4CAF50;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* PROJECT GALLERY */
+        .gallery {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .item {
+            background: #4CAF50;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* TABLET */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-areas:
+                    "header header"
+                    "nav nav"
+                    "hero hero"
+                    "about services"
+                    "projects projects"
+                    "testimonials testimonials"
+                    "footer footer";
+
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* DESKTOP */
+        @media (min-width: 1024px) {
+            .container {
+                grid-template-areas:
+                    "header header header"
+                    "nav hero hero"
+                    "about about services"
+                    "projects projects projects"
+                    "testimonials testimonials testimonials"
+                    "footer footer footer";
+
+                grid-template-columns: 1fr 2fr 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <h1>My Portfolio</h1>
+    </header>
+
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to My Portfolio</h2>
+        <p>This layout uses CSS Grid for complete control and responsiveness.</p>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am a web developer learning advanced layout techniques using CSS Grid.</p>
+    </section>
+
+    <section class="services">
+        <h2>Services</h2>
+        <div class="service-grid">
+            <div class="box">Web Design</div>
+            <div class="box">UI/UX</div>
+            <div class="box">Responsive Layouts</div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Projects Gallery</h2>
+        <div class="gallery">
+            <div class="item">Project 1</div>
+            <div class="item">Project 2</div>
+            <div class="item">Project 3</div>
+            <div class="item">Project 4</div>
+            <div class="item">Project 5</div>
+            <div class="item">Project 6</div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <p>"Amazing work and excellent design skills!"</p>
+    </section>
+
+    <footer class="footer">
+        © 2025 My Portfolio | All Rights Reserved
+    </footer>
+
+</div>
+
+</body>
+</html>

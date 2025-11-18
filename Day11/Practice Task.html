@@ -1,0 +1,120 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Grid Practice Tasks</title>
+
+  <style>
+    /* ---------- Task 1: 3x2 Grid ---------- */
+    .grid-3x2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;   /* 3 columns */
+      grid-template-rows: 100px 100px;      /* 2 rows */
+      gap: 5px;
+      margin-bottom: 30px;
+      border: 2px solid black;
+    }
+    .grid-3x2 div {
+      background: lightblue;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* ---------- Task 2: 4 Equal Columns Using fr ---------- */
+    .four-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal parts */
+      gap: 5px;
+      margin-bottom: 30px;
+      border: 2px solid black;
+    }
+    .four-cols div {
+      background: lightgreen;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* ---------- Task 3: Gap Between Items ---------- */
+    .grid-gap {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .grid-gap div {
+      background: peachpuff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* ---------- Task 4: Named Grid Areas (header, main, footer) ---------- */
+    .named-layout {
+      display: grid;
+      grid-template-areas:
+        "header"
+        "main"
+        "footer";
+      grid-template-rows: 60px 200px 60px;
+      gap: 10px;
+      margin-bottom: 30px;
+      border: 2px solid black;
+    }
+    .head  { grid-area: header; background: #ddd; padding: 20px; }
+    .main  { grid-area: main;   background: #eee; padding: 20px; }
+    .foot  { grid-area: footer; background: #ccc; padding: 20px; }
+
+    /* ---------- Task 5: repeat() Function ---------- */
+    .repeat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* repeat syntax */
+      gap: 10px;
+      border: 2px solid black;
+    }
+    .repeat-grid div {
+      background: skyblue;
+      padding: 20px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>CSS Grid Practice Tasks</h1>
+
+  <!-- Task 1 -->
+  <h2>Task 1: 3x2 Grid</h2>
+  <div class="grid-3x2">
+    <div>1</div><div>2</div><div>3</div>
+    <div>4</div><div>5</div><div>6</div>
+  </div>
+
+  <!-- Task 2 -->
+  <h2>Task 2: 4 Equal Columns using fr</h2>
+  <div class="four-cols">
+    <div>A</div><div>B</div><div>C</div><div>D</div>
+  </div>
+
+  <!-- Task 3 -->
+  <h2>Task 3: Grid with Gap</h2>
+  <div class="grid-gap">
+    <div>Item 1</div><div>Item 2</div><div>Item 3</div>
+  </div>
+
+  <!-- Task 4 -->
+  <h2>Task 4: Named Grid Areas (header, main, footer)</h2>
+  <div class="named-layout">
+    <header class="head">Header</header>
+    <main class="main">Main Area</main>
+    <footer class="foot">Footer</footer>
+  </div>
+
+  <!-- Task 5 -->
+  <h2>Task 5: repeat() Grid Columns</h2>
+  <div class="repeat-grid">
+    <div>1</div><div>2</div><div>3</div><div>4</div>
+  </div>
+
+</body>
+</html>
