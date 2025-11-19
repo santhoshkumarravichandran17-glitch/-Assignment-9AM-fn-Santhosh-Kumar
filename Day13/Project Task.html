@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Progressive Webpage</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff; /* Light blue background */
+}
+
+/* ----------------------------------- */
+/* NAVBAR */
+nav {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    padding: 15px 30px;
+}
+nav a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+nav a:hover {
+    color: yellow;
+    text-shadow: 0 0 5px #fff;
+    transform: scale(1.1);
+}
+
+/* ----------------------------------- */
+/* HERO SECTION */
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    color: white;
+    text-align: center;
+    animation: fadeUp 1.4s;
+}
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    animation: bounceText 2s infinite alternate;
+}
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Hero text animation */
+@keyframes bounceText {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------------- */
+/* LOADER */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #ff6a00;
+    border-right: 6px solid #ee0979;
+    border-bottom: 6px solid #6a11cb;
+    border-left: 6px solid #2575fc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ----------------------------------- */
+/* RESPONSIVE CARDS */
+.container {
+    display: grid;
+    gap: 25px;
+    margin: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Image hover zoom */
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+.card img:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+/* Card headings */
+.card h3 {
+    margin: 15px 0 10px 0;
+    color: #ff6a00;
+}
+
+/* ----------------------------------- */
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <h1>Welcome to My Animated Webpage</h1>
+    <div class="loader"></div>
+    <p>All animations added from the Progressive Task</p>
+</div>
+
+<!-- RESPONSIVE CARD SECTION -->
+<div class="container">
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Project 1</h3>
+        <p>Hover zoom image + card animation</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Project 2</h3>
+        <p>Fully responsive grid design</p>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="">
+        <h3>Project 3</h3>
+        <p>Beginner-friendly smooth animations</p>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2025 Your SanthoshKumar. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

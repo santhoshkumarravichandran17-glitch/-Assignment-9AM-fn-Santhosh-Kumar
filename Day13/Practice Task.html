@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practice Tasks</title>
+
+<style>
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f7f7f7;
+}
+
+/* Task 1: Color Change Box */
+.color-box {
+    width: 150px;
+    height: 150px;
+    background: skyblue;
+    transition: background 0.5s;
+}
+.color-box:hover {
+    background: tomato;
+}
+
+/* Task 2: Left-to-Right Text Animation */
+.move-text {
+    display: inline-block;
+    animation: move 3s linear infinite;
+}
+@keyframes move {
+    from { transform: translateX(0); }
+    to { transform: translateX(200px); }
+}
+
+/* Task 3: Grow Image on Hover */
+img.grow {
+    width: 160px;
+    transition: transform 0.4s;
+}
+img.grow:hover {
+    transform: scale(1.2);
+}
+
+/* Task 4: Continuous Square Rotation */
+.rotate-box {
+    width: 100px;
+    height: 100px;
+    background: purple;
+    animation: spin 3s infinite linear;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Task 5: Button Hover + Focus Effect */
+.btn {
+    padding: 10px 20px;
+    background: green;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+.btn:hover {
+    background: darkgreen;
+}
+.btn:focus {
+    outline: 3px solid yellow;
+}
+</style>
+
+</head>
+<body>
+
+<h1>Practice Tasks</h1>
+
+<h2>Task 1: Box Color Change on Hover</h2>
+<div class="color-box"></div>
+
+<h2>Task 2: Moving Text Animation</h2>
+<p class="move-text">This text moves →</p>
+
+<h2>Task 3: Grow Image on Hover</h2>
+<img src="./NOpainNOgain.jpg" class="grow">
+
+<h2>Task 4: Rotating Square</h2>
+<div class="rotate-box"></div>
+
+<h2>Task 5: Smooth Hover Button</h2>
+<button class="btn">Hover Me</button>
+
+</body>
+</html>

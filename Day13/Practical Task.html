@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practical Tasks</title>
+
+<style>
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+/* -------------------------------------- */
+/* Task 1: Loader Animation */
+/* -------------------------------------- */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ddd;
+    border-top: 6px solid blue;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* -------------------------------------- */
+/* Task 2: 3D Card Flip */
+/* -------------------------------------- */
+.card {
+    width: 160px;
+    height: 160px;
+    perspective: 900px;
+}
+.inner {
+    width: 100%;
+    height: 100%;
+    transition: 0.7s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.card:hover .inner {
+    transform: rotateY(180deg);
+}
+.front, .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front {
+    background: salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back {
+    background: gold;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------- */
+/* Task 3: Progress Bar Animation */
+/* -------------------------------------- */
+.progress-container {
+    width: 300px;
+    background: #ddd;
+    height: 22px;
+    margin-top: 15px;
+}
+.progress {
+    height: 100%;
+    width: 0;
+    background: green;
+    animation: fillBar 3s forwards;
+}
+@keyframes fillBar {
+    to { width: 100%; }
+}
+
+/* -------------------------------------- */
+/* Task 4: Bouncing Ball */
+/* -------------------------------------- */
+.ball {
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 1s infinite ease-in-out alternate;
+}
+@keyframes bounce {
+    from { top: 0px; }
+    to { top: 120px; }
+}
+
+/* -------------------------------------- */
+/* Task 5: Hover Transition Card */
+/* -------------------------------------- */
+.hover-card {
+    width: 180px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ccc;
+    transition: 0.4s;
+}
+.hover-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+</style>
+
+</head>
+<body>
+
+<h1>Practical Tasks</h1>
+
+<!-- Task 1 -->
+<h2>Task 1: Loader Animation</h2>
+<div class="loader"></div>
+
+<!-- Task 2 -->
+<h2>Task 2: Card Flip Effect</h2>
+<div class="card">
+    <div class="inner">
+        <div class="front">FRONT</div>
+        <div class="back">BACK</div>
+    </div>
+</div>
+
+<!-- Task 3 -->
+<h2>Task 3: Animated Progress Bar</h2>
+<div class="progress-container">
+    <div class="progress"></div>
+</div>
+
+<!-- Task 4 -->
+<h2>Task 4: Bouncing Ball Animation</h2>
+<div class="ball"></div>
+
+<!-- Add big gap here -->
+<div style="height: 100px;"></div>
+
+<!-- Task 5 -->
+<h2>Task 5: Hover Transition Product Card</h2>
+<div class="hover-card">Product Card</div>
+
+</body>
+</html>
