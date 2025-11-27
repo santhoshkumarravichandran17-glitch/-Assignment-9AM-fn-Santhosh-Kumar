@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Tasks</title>
+
+    <!-- Bootstrap + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #e3f2ff, #fffbe7);
+            font-family: 'Poppins', sans-serif;
+        }
+        .fade {
+            animation: fadeIn .8s ease;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(15px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* Make carousel images perfect fit */
+        .carousel-item img {
+            height: 350px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="p-4">
+
+    <h1 class="text-center fw-bold text-primary fade mb-4">Practice Tasks</h1>
+
+    <!-- 1. Modal -->
+    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Open Modal</button>
+
+    <div class="modal fade" id="exampleModal">
+        <div class="modal-dialog">
+            <div class="modal-content p-3">
+                <h4 class="text-primary">Practice Modal</h4>
+                <p>This is a simple modal with a title and paragraph.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Carousel (Updated with Perfect Images) -->
+    <div id="practiceCarousel" class="carousel slide mb-4 shadow rounded overflow-hidden">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" class="d-block w-100" alt="Nature Image">
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="d-block w-100" alt="City Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Icon + Heading -->
+    <h3 class="text-success">
+        <i class="bi bi-star-fill"></i> Icon Heading Example
+    </h3>
+
+    <!-- 4. Collapse -->
+    <p>
+        <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#moreInfo">More Info</button>
+    </p>
+    <div id="moreInfo" class="collapse">
+        <div class="card card-body">
+            This is the extra information inside the collapse section.
+        </div>
+    </div>
+
+    <!-- 5. Custom Button -->
+    <button class="btn btn-lg btn-info text-white px-5 py-3 rounded-pill mt-3 shadow">
+        Styled Button
+    </button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

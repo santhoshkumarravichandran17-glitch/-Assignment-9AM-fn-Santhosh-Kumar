@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive Project</title>
+
+    <!-- Bootstrap + Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #eef5ff;
+            font-family: 'Poppins';
+        }
+        .hero {
+            animation: slide .8s ease;
+        }
+        @keyframes slide {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1;}
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .carousel-item img {
+            height: 420px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HERO CAROUSEL WITH NEW IMAGES -->
+<div id="heroCarousel" class="carousel slide hero shadow-sm" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702" 
+                 class="w-100" alt="Hero Image 1">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1503264116251-35a269479413"
+                 class="w-100" alt="Hero Image 2">
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1487014679447-9f8336841d58"
+                 class="w-100" alt="Hero Image 3">
+        </div>
+
+    </div>
+</div>
+
+<div class="container py-5">
+
+    <!-- Hire Me Button (Modal Trigger) -->
+    <button class="btn btn-lg btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#hireModal">
+        Hire Me
+    </button>
+
+    <!-- Hire Me Modal -->
+    <div class="modal fade" id="hireModal">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <h3 class="text-primary">Contact Me</h3>
+                <input class="form-control mb-3" placeholder="Your Name">
+                <input class="form-control mb-3" placeholder="Email">
+                <textarea class="form-control mb-3" placeholder="Message"></textarea>
+                <button class="btn btn-success w-100">Send Message</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Collapse FAQ -->
+    <h3 class="mb-2">Project FAQ</h3>
+    <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target="#faq">
+        More Info
+    </button>
+    <div id="faq" class="collapse mt-3">
+        <div class="card p-3">
+            This contains detailed project information.
+        </div>
+    </div>
+
+    <!-- Product Cards -->
+    <div class="row g-4 mt-5">
+        
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <i class="bi bi-collection fs-1 text-primary"></i>
+                <h4>Modern UI</h4>
+                <p>Beautiful designs using Bootstrap utilities.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 shadow">
+                <i class="bi bi-palette fs-1 text-danger"></i>
+                <h4>Custom Themes</h4>
+                <p>Colors matched to your project branding.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
