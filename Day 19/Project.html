@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progressive Project Integration</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        .box {
+            padding: 15px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 6px 12px;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Progressive Project Integration</h2>
+
+<div class="box">
+    <h3>User Input</h3>
+    <input type="text" id="userName" placeholder="Enter your name">
+    <button id="submitName">Submit Name</button>
+    <p id="displayName"></p>
+</div>
+
+<div class="box">
+    <h3>Numeric Values</h3>
+    <input type="number" id="num1" placeholder="Number 1">
+    <input type="number" id="num2" placeholder="Number 2">
+    <button id="sumBtn">Calculate Sum</button>
+    <p id="sumResult"></p>
+</div>
+
+<div class="box">
+    <h3>Array of Items</h3>
+    <input type="text" id="itemInput" placeholder="Add item to list">
+    <button id="addItemBtn">Add Item</button>
+    <p id="itemsList"></p>
+</div>
+
+<div class="box">
+    <h3>Task Object Example</h3>
+    <button id="showTaskBtn">Show Student Task</button>
+    <p id="taskDisplay"></p>
+</div>
+
+<div class="box">
+    <h3>UI State (Boolean Example)</h3>
+    <button id="toggleThemeBtn">Toggle Dark Mode</button>
+    <p id="themeState">Current Theme: Light</p>
+</div>
+
+<script>
+    // ---------------------------
+    // 1. Accept user input (strings)
+    // ---------------------------
+    const submitBtn = document.getElementById("submitName");
+    const userNameInput = document.getElementById("userName");
+    const displayName = document.getElementById("displayName");
+
+    submitBtn.addEventListener("click", () => {
+        const name = userNameInput.value.trim();
+        displayName.textContent = name ? `Hello, ${name}!` : "Please enter a name.";
+        console.log("User Name:", name);
+    });
+
+    // ---------------------------
+    // 2. Store numeric values & calculate sum
+    // ---------------------------
+    const sumBtn = document.getElementById("sumBtn");
+    const num1Input = document.getElementById("num1");
+    const num2Input = document.getElementById("num2");
+    const sumResult = document.getElementById("sumResult");
+
+    sumBtn.addEventListener("click", () => {
+        const n1 = Number(num1Input.value);
+        const n2 = Number(num2Input.value);
+        const sum = n1 + n2;
+        sumResult.textContent = `Sum: ${sum}`;
+        console.log("Sum:", sum);
+    });
+
+    // ---------------------------
+    // 3. Manage arrays of items
+    // ---------------------------
+    let items = [];
+    const addItemBtn = document.getElementById("addItemBtn");
+    const itemInput = document.getElementById("itemInput");
+    const itemsList = document.getElementById("itemsList");
+
+    addItemBtn.addEventListener("click", () => {
+        const item = itemInput.value.trim();
+        if(item) {
+            items.push(item);
+            itemsList.textContent = `Items: ${items.join(", ")}`;
+            itemInput.value = "";
+            console.log("Current Items Array:", items);
+        }
+    });
+
+    // ---------------------------
+    // 4. Build objects for tasks
+    // ---------------------------
+    const showTaskBtn = document.getElementById("showTaskBtn");
+    const taskDisplay = document.getElementById("taskDisplay");
+
+    const studentTask = {
+        studentName: "Santhosh",
+        course: "Web Development",
+        assignment: "Progressive Project Integration",
+        dueDate: "2025-12-15"
+    };
+
+    showTaskBtn.addEventListener("click", () => {
+        taskDisplay.textContent = JSON.stringify(studentTask);
+        console.log("Student Task Object:", studentTask);
+    });
+
+    // ---------------------------
+    // 5. Use booleans for UI state (dark mode)
+    // ---------------------------
+    let isDarkMode = false;
+    const toggleThemeBtn = document.getElementById("toggleThemeBtn");
+    const themeState = document.getElementById("themeState");
+
+    toggleThemeBtn.addEventListener("click", () => {
+        isDarkMode = !isDarkMode;
+        document.body.style.backgroundColor = isDarkMode ? "#333" : "#fff";
+        document.body.style.color = isDarkMode ? "#fff" : "#000";
+        themeState.textContent = `Current Theme: ${isDarkMode ? "Dark" : "Light"}`;
+        console.log("Dark Mode Enabled:", isDarkMode);
+    });
+
+</script>
+
+</body>
+</html>

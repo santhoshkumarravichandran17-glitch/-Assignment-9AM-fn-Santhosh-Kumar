@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Welcome Section -->
+    <h1 id="welcomeMessage">Hello!</h1>
+
+    <!-- About Me Section -->
+    <p id="aboutMeText">Click the button to learn something about me.</p>
+    <button onclick="showAboutMe()">Show About Me</button>
+
+    <!-- Footer -->
+    <footer>
+        &copy; <span id="currentYear"></span> My Portfolio
+    </footer>
+
+    <script>
+        // 1. Welcome alert/message
+        const userName = "Santhosh";
+        const welcomeMessage = `Welcome to my portfolio, ${userName}!`;
+        document.getElementById("welcomeMessage").innerText = welcomeMessage;
+        window.onload = function() {
+            alert(welcomeMessage);
+        };
+
+        // 2. Update footer year dynamically
+        const year = new Date().getFullYear();
+        document.getElementById("currentYear").innerText = year;
+
+        // 3. Simple interaction: button click
+        function showAboutMe() {
+            const aboutMe = {
+                Name: "Santhosh",
+                Age: 22,
+                City: "Chennai",
+                Profession: "Student",
+                Hobby: "Coding & Reading"
+            };
+
+            let info = "About Me:\n";
+            for (let key in aboutMe) {
+                info += `${key}: ${aboutMe[key]}\n`;
+            }
+
+            // Show info in paragraph and log in console
+            document.getElementById("aboutMeText").innerText = info;
+            console.log(aboutMe);
+        }
+
+        // 4. Console experimentation
+        // Try simple math or text updates before adding them to your projects
+        console.log("Current year plus 5:", year + 5);
+        console.log("Favorite color example:", "Blue".toUpperCase());
+    </script>
+    
+</body>
+</html>

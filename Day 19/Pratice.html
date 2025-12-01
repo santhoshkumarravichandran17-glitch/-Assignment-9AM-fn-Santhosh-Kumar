@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practice Tasks - Simple</title>
+</head>
+<body>
+
+<h2>Practice Tasks (Simple)</h2>
+
+<div id="output"></div>
+
+<script>
+    const output = document.getElementById("output");
+
+    function show(msg) {
+        console.log(msg);
+        const p = document.createElement("p");
+        p.textContent = msg;
+        output.appendChild(p);
+    }
+
+    // ---------------------------------------------------
+    // 1. Declare variables for all 7 primitive types
+    // ---------------------------------------------------
+    let myString = "Hello";       // string
+    let myNumber = 25;            // number
+    let myBoolean = true;         // boolean
+    let myUndefined;              // undefined
+    let myNull = null;            // null
+    let myBigInt = 12345678901234567890n; // BigInt
+    let mySymbol = Symbol("id");  // Symbol
+
+    // ---------------------------------------------------
+    // 2. Check each variable's type with typeof
+    // ---------------------------------------------------
+    show("Type of myString: " + typeof myString);
+    show("Type of myNumber: " + typeof myNumber);
+    show("Type of myBoolean: " + typeof myBoolean);
+    show("Type of myUndefined: " + typeof myUndefined);
+    show("Type of myNull: " + typeof myNull); // special case → object
+    show("Type of myBigInt: " + typeof myBigInt);
+    show("Type of mySymbol: " + typeof mySymbol);
+
+    // ---------------------------------------------------
+    // 3. Create an object with 3 properties and print them
+    // ---------------------------------------------------
+    const person = {
+        name: "Santhosh",
+        age: 20,
+        city: "Chennai"
+    };
+
+    show("Person Object: " + JSON.stringify(person));
+    show("Person Name: " + person.name);
+    show("Person Age: " + person.age);
+    show("Person City: " + person.city);
+
+    // ---------------------------------------------------
+    // 4. Convert "45" to a number
+    // ---------------------------------------------------
+    let numValue = Number("45");
+    show('"45" converted to number: ' + numValue + " (" + typeof numValue + ")");
+
+    // ---------------------------------------------------
+    // 5. Convert false to a string
+    // ---------------------------------------------------
+    let strValue = String(false);
+    show('false converted to string: "' + strValue + '" (' + typeof strValue + ')');
+
+</script>
+
+</body>
+</html>

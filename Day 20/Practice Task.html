@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice Tasks</title>
+</head>
+<body>
+    <h1>JavaScript Practice Tasks</h1>
+    <div id="output"></div>
+
+    <script>
+        const output = document.getElementById("output");
+
+        // 1. Primitive types
+        let myString = "Hello, World!";
+        let myNumber = 42;
+        let myBoolean = true;
+        let myUndefined;
+        let myNull = null;
+        let mySymbol = Symbol("unique");
+        let myBigInt = 9007199254740991n;
+
+        // 2. Show types
+        output.innerHTML += `<p>Type of myString: ${typeof myString}</p>`;
+        output.innerHTML += `<p>Type of myNumber: ${typeof myNumber}</p>`;
+        output.innerHTML += `<p>Type of myBoolean: ${typeof myBoolean}</p>`;
+        output.innerHTML += `<p>Type of myUndefined: ${typeof myUndefined}</p>`;
+        output.innerHTML += `<p>Type of myNull: ${typeof myNull}</p>`;
+        output.innerHTML += `<p>Type of mySymbol: ${typeof mySymbol}</p>`;
+        output.innerHTML += `<p>Type of myBigInt: ${typeof myBigInt}</p>`;
+
+        // 3. Object with 3 properties
+        const person = {name: "Santhosh", age: 22, city: "Chennai"};
+        output.innerHTML += `<p>Person object: ${JSON.stringify(person)}</p>`;
+
+        // 4. Convert "100" to number
+        let strNumber = "100";
+        let convertedNumber = Number(strNumber);
+        output.innerHTML += `<p>Converted "100" to number: ${convertedNumber}</p>`;
+
+        // 5. Convert false to string
+        let boolValue = false;
+        let convertedString = String(boolValue);
+        output.innerHTML += `<p>Converted false to string: ${convertedString}</p>`;
+    </script>
+</body>
+</html>

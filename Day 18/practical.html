@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Practical Tasks</title>
+</head>
+
+<body>
+
+<h2>Output:</h2>
+<div id="result"></div>
+
+<script>
+    const output = document.getElementById("result");
+
+    const userProfile = { name: "Santhosh", age: 20 };
+    userProfile.age = 21;
+    output.innerHTML += "<p>User: " + JSON.stringify(userProfile) + "</p>";
+
+    let a = 10, b = 5;
+    let sum = a + b;
+    output.innerHTML += "<p>Sum: " + sum + "</p>";
+
+    let loop = "";
+    for (let i = 1; i <= 5; i++) loop += i + " ";
+    output.innerHTML += "<p>Loop: " + loop + "</p>";
+
+    const cart = { item: "Laptop", quantity: 1 };
+    cart.quantity = 2;
+    output.innerHTML += "<p>Cart: " + JSON.stringify(cart) + "</p>";
+
+    const defaultSettings = { theme: "light" };
+    let userSettings = { theme: "light" };
+    userSettings.theme = "dark";
+    output.innerHTML += "<p>User Settings: " + JSON.stringify(userSettings) + "</p>";
+</script>
+
+</body>
+</html>

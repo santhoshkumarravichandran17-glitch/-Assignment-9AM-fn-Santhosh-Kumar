@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="dynamicText">Hello!</h1>
+    <p id="changeText">This text will change when you click the button.</p>
+    <button onclick="changeParagraphText()">Click Me!</button>
+
+    <script>
+        // 1. Display dynamic text
+        const name = "Santhosh";
+        const greeting = `Welcome to my page, ${name}!`;
+        document.getElementById("dynamicText").innerText = greeting;
+
+        // 2. Welcome alert on page load
+        window.onload = function() {
+            alert("Welcome to my mini projects page!");
+        };
+
+        // 3. Log favorite hobby, food, and color
+        const hobby = "Reading";
+        const food = "Pizza";
+        const color = "Blue";
+        console.log("My favorite hobby is:", hobby);
+        console.log("My favorite food is:", food);
+        console.log("My favorite color is:", color);
+
+        // 4. Button to change text inside <p>
+        function changeParagraphText() {
+            document.getElementById("changeText").innerText = "You clicked the button! Text changed.";
+        }
+
+        // 5. About Me script printing multiple details
+        const aboutMe = {
+            name: "Santhosh",
+            age: 22,
+            city: "Chennai",
+            profession: "Student"
+        };
+        console.log("About Me:");
+        for (let key in aboutMe) {
+            console.log(`${key}: ${aboutMe[key]}`);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Progressive Project Integration</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+        
+        #box {
+            padding: 20px;
+            background-color: lightgray;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Progressive Project Integration</h2>
+<p><b>Open console for additional outputs.</b></p>
+
+<div id="box">Theme Box</div>
+<p>Counter: <span id="count">0</span></p>
+
+<button id="themeBtn">Toggle Theme</button>
+<button id="countBtn">Increase Counter</button>
+
+<script>
+    // ------------------------------------------------------
+    // 1. Using const & let properly
+    // ------------------------------------------------------
+
+    const SITE_URL = "https://myportfolio.com";     // static constant
+    const TAX_RATE = 0.18;                           // static constant
+    const THEME_COLORS = {
+        light: "#f4f4f4",
+        dark: "#333"
+    };
+
+    let currentTheme = "light";   // UI variable → will change
+    let counter = 0;              // UI counter variable
+
+    console.log("Website URL:", SITE_URL);
+    console.log("Tax Rate:", TAX_RATE);
+
+
+    // ------------------------------------------------------
+    // 2. Block scope organization (safer scripting)
+    // ------------------------------------------------------
+    {
+        const message = "Welcome to the Progressive Project!";
+        console.log(message);
+
+        let year = new Date().getFullYear();
+        console.log("Current Year:", year);
+    }
+
+    // message or year are NOT accessible here → block safe
+    // console.log(message); // ❌ error
+
+
+    // ------------------------------------------------------
+    // 3. Using let to handle UI interactions (toggle)
+    // ------------------------------------------------------
+    const box = document.getElementById("box");
+    const themeBtn = document.getElementById("themeBtn");
+
+    themeBtn.addEventListener("click", () => {
+        if (currentTheme === "light") {
+            currentTheme = "dark";
+            box.style.backgroundColor = THEME_COLORS.dark;
+            box.style.color = "white";
+        } else {
+            currentTheme = "light";
+            box.style.backgroundColor = THEME_COLORS.light;
+            box.style.color = "black";
+        }
+
+        console.log("Theme changed to:", currentTheme);
+    });
+
+
+    // ------------------------------------------------------
+    // 4. Using let for counter button
+    // ------------------------------------------------------
+    const countBtn = document.getElementById("countBtn");
+    const countDisplay = document.getElementById("count");
+
+    countBtn.addEventListener("click", () => {
+        counter++;  
+        countDisplay.textContent = counter;
+
+        console.log("Counter:", counter);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Practical Tasks - Mini Projects</title>
+</head>
+<body>
+
+<h2>Practical Tasks - Mini Projects</h2>
+
+<div id="output"></div>
+
+<script>
+    const output = document.getElementById("output");
+
+    function show(msg) {
+        console.log(msg);
+        const p = document.createElement("p");
+        p.textContent = msg;
+        output.appendChild(p);
+    }
+
+    // ---------------------------------------------------
+    // 1. Student Profile (object + strings + numbers)
+    // ---------------------------------------------------
+    const studentProfile = {
+        name: "Santhosh Kumar",
+        age: 20,
+        course: "Web Development",
+        grade: "A"
+    };
+
+    show("Student Profile:");
+    show(JSON.stringify(studentProfile));
+
+    // ---------------------------------------------------
+    // 2. Product Price Calculator (number + string conversion)
+    // ---------------------------------------------------
+    let priceStr = "500";           // string
+    let quantity = 3;               // number
+    let priceNum = Number(priceStr); // convert to number
+    let total = priceNum * quantity;
+
+    show(`Price: ${priceNum} x Quantity: ${quantity} = Total: ${total}`);
+
+    // ---------------------------------------------------
+    // 3. Login Status Indicator (boolean usage)
+    // ---------------------------------------------------
+    let isLoggedIn = true;
+    show("User Login Status: " + isLoggedIn);
+
+    // ---------------------------------------------------
+    // 4. BigInt large number addition
+    // ---------------------------------------------------
+    const big1 = 123456789012345678901234567890n;
+    const big2 = 987654321098765432109876543210n;
+    const bigSum = big1 + big2;
+
+    show("BigInt Addition Result: " + bigSum);
+
+    // ---------------------------------------------------
+    // 5. Create 3 users with unique Symbol IDs
+    // ---------------------------------------------------
+    const user1 = { id: Symbol("user1"), name: "Alice" };
+    const user2 = { id: Symbol("user2"), name: "Bob" };
+    const user3 = { id: Symbol("user3"), name: "Charlie" };
+
+    show("Users with unique IDs:");
+    show(JSON.stringify({ name: user1.name, id: user1.id.toString() }));
+    show(JSON.stringify({ name: user2.name, id: user2.id.toString() }));
+    show(JSON.stringify({ name: user3.name, id: user3.id.toString() }));
+
+</script>
+
+</body>
+</html>
