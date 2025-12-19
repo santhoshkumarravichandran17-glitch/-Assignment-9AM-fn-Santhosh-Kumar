@@ -1,127 +1,81 @@
-// 1. User Class
-class User {
-    constructor(name, email) {
-        this.name = name;
-        this.email = email;
-    }
+// Task 1: Product Class
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
 
-    login() {
-        return `${this.name} logged in successfully`;
-    }
+  discountedPrice() {
+    return this.price - this.price * 0.1;
+  }
 }
 
-const user1 = new User("Santhosh", "santhosh@gmail.com");
-console.log(user1.login());
-console.log("----------------------"); 
+const product1 = new Product("Laptop", 50000);
+console.log(product1.discountedPrice());
 
 
-// 2. BankAccount Class
-class BankAccount {
-    constructor(balance = 0) {
-        this.balance = balance;
-    }
-
-    deposit(amount) {
-        this.balance += amount;
-        return `Deposited: ${amount}, New Balance: ${this.balance}`;
-    }
-
-    withdraw(amount) {
-        if (amount > this.balance) {
-            return "Insufficient Balance";
-        }
-        this.balance -= amount;
-        return `Withdrawn: ${amount}, Remaining Balance: ${this.balance}`;
-    }
-}
-
-const acc = new BankAccount(500);
-console.log(acc.deposit(200));
-console.log(acc.withdraw(100));
-console.log(acc.withdraw(700));
-console.log("-----------------------"); 
-
-
-
-// 3. Prototype Chain (Vehicle → Car → ElectricCar)
-function Vehicle(type) {
-    this.type = type;
-}
-
-Vehicle.prototype.info = function () {
-    return `This is a ${this.type}`;
+// Task 2: User Object with Methods
+const user = {
+  login() {
+    console.log("User logged in");
+  },
+  logout() {
+    console.log("User logged out");
+  }
 };
 
-function Car(type, brand) {
-    Vehicle.call(this, type);
-    this.brand = brand;
-}
-
-Car.prototype = Object.create(Vehicle.prototype);
-
-function ElectricCar(type, brand, battery) {
-    Car.call(this, type, brand);
-    this.battery = battery;
-}
-
-ElectricCar.prototype = Object.create(Car.prototype);
-
-const tesla = new ElectricCar("Car", "Tesla", "90 kWh");
-
-console.log(tesla.info());
-console.log(tesla.brand);
-console.log(tesla.battery);
-console.log("-----------------------"); 
+user.login();
+user.logout();
 
 
-
-// 4. Product List using Objects + Destructuring
-const products = [
-    { name: "Laptop", price: 50000 },
-    { name: "Mobile", price: 20000 },
-    { name: "Headphones", price: 2000 }
-];
-
-products.forEach(product => {
-    const { name, price } = product;
-    console.log(`Product: ${name} | Price: ₹${price}`);
-});
-console.log("-----------------------"); 
-
-
-
-// 5. Student Management System
+// Task 3: Student Class with 3 Objects
 class Student {
-    constructor(name, age, marks) {
-        this.name = name;
-        this.age = age;
-        this.marks = marks;
-    }
+  constructor(name, rollNo) {
+    this.name = name;
+    this.rollNo = rollNo;
+  }
 
-    getDetails() {
-        return `${this.name} | Age: ${this.age} | Marks: ${this.marks}`;
-    }
+  display() {
+    console.log(this.name, this.rollNo);
+  }
 }
 
-class StudentManagement {
-    constructor() {
-        this.students = [];
-    }
+const s1 = new Student("A", 1);
+const s2 = new Student("B", 2);
+const s3 = new Student("C", 3);
 
-    addStudent(student) {
-        this.students.push(student);
-        return "Student Added!";
-    }
+s1.display();
+s2.display();
+s3.display();
 
-    listStudents() {
-        return this.students.map(s => s.getDetails());
-    }
+
+// Task 4: Shape and Circle (Inheritance)
+class Shape {
+  area() {
+    return 0;
+  }
 }
 
-const system = new StudentManagement();
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
 
-system.addStudent(new Student("Santhosh", 23, 90));
-system.addStudent(new Student("Priya", 22, 85));
+  area() {
+    return Math.PI * this.radius * this.radius;
+  }
+}
 
-console.log(system.listStudents());
-console.log("-----------------------"); 
+const c1 = new Circle(5);
+console.log(c1.area());
+
+
+// Task 5: Prototype Method for Student
+Student.prototype.greet = function () {
+  console.log("Hello", this.name);
+};
+
+s1.greet();
+s2.greet();
+s3.greet();

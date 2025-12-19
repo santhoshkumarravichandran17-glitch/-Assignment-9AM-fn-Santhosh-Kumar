@@ -1,42 +1,46 @@
-// 1. Create an object called book with title, author, year
 const book = {
-    title: "JavaScript Essentials",
-    author: "John Smith",
-    year: 2023,
-
-    // 2. Add a method getInfo() that prints book details
-    getInfo() {
-        console.log(`Title: ${this.title}, Author: ${this.author}, Year: ${this.year}`);
-    }
+  title: "JavaScript Fundamentals",
+  author: "David Smith",
+  pages: 300,
+  describe() {
+    console.log("Title:", this.title);
+    console.log("Author:", this.author);
+    console.log("Pages:", this.pages);
+  }
 };
 
-book.getInfo();
-console.log("--------------------------");
+book.describe();
 
-
-
-// 3. Destructure title and author from the book object
 const { title, author } = book;
-console.log("Destructured Title:", title);
-console.log("Destructured Author:", author);
-console.log("--------------------------"); 
+console.log(title);
+console.log(author);
 
+class Employee {
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
 
-
-// 4. Create a class Mobile with brand, price
-class Mobile {
-    constructor(brand, price) {
-        this.brand = brand;
-        this.price = price;
-    }
-
-    // 5. Add a method discount() that reduces price by 10%
-    discount() {
-        this.price = this.price - (this.price * 0.10);
-        console.log(`Discounted Price of ${this.brand}: ${this.price}`);
-    }
+  displayInfo() {
+    console.log(this.name);
+    console.log(this.salary);
+  }
 }
 
-const phone = new Mobile("Samsung", 20000);
-phone.discount();
-console.log("--------------------------"); 
+const emp = new Employee("Santhosh", 25000);
+emp.displayInfo();
+
+class Manager extends Employee {
+  constructor(name, salary, department) {
+    super(name, salary);
+    this.department = department;
+  }
+
+  displayManagerInfo() {
+    this.displayInfo();
+    console.log(this.department);
+  }
+}
+
+const mgr = new Manager("Kumar", 45000, "IT");
+mgr.displayManagerInfo();
