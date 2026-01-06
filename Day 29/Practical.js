@@ -3,7 +3,6 @@ function show(id, msg) {
   document.getElementById(id).innerHTML += msg + "<br>";
 }
 
-
 // Task 1: Login Counter using closure
 function loginCounter() {
   let count = 0;
@@ -26,7 +25,6 @@ function simulateAPI() {
 }
 
 simulateAPI().then(msg => show("apiOutput", msg));
-
 
 // Task 3: Fetch user data with async/await
 async function fetchUser() {
