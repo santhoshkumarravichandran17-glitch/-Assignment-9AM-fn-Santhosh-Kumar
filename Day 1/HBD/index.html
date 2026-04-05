@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enter ❤️</title>
+
+<style>
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    background: pink;
+    color: white;
+}
+</style>
+
+<script>
+function checkPassword(){
+    let pass = document.getElementById("pass").value;
+    if(pass === "Priya"){
+        window.location.href = "gallery.html";
+    } else {
+        alert("Wrong password 😜");
+    }
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Only for Priya ❤️</h1>
+
+<p>Enter password to open 🎁</p>
+
+<input type="password" id="pass" placeholder="Enter name">
+<br><br>
+
+<button onclick="checkPassword()">Open 💖</button>
+
+</body>
+</html>

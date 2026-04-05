@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memories 💖</title>
+
+<style>
+body {
+    margin: 0;
+    text-align: center;
+    background: black;
+    overflow: hidden;
+    color: white;
+}
+
+/* 🌙 STARS BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/9QZ7Z5y.png');
+    animation: stars 80s linear infinite;
+    z-index: -1;
+}
+
+@keyframes stars {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 5000px;}
+}
+
+/* 🌙 MOON */
+.moon {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+}
+
+/* 💖 FRAME */
+.frame {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 25px;
+    background: linear-gradient(45deg, pink, red, purple);
+    box-shadow: 0 0 30px pink;
+    margin-top: 100px;
+    animation: glow 2s infinite alternate;
+    position: relative;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px pink; }
+    to { box-shadow: 0 0 30px white; }
+}
+
+/* 📸 IMAGE */
+#slide {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: opacity 1s;
+}
+
+/* 💖 NAME OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: pink;
+    font-size: 20px;
+    text-shadow: 0 0 10px white;
+}
+
+/* ❤️ FLOATING HEARTS */
+.heart {
+    position: absolute;
+    animation: float 6s linear infinite;
+}
+
+@keyframes float {
+    from {transform: translateY(100vh);}
+    to {transform: translateY(-10vh);}
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+    #slide {
+        width: 90%;
+        height: 220px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon">🌙</div>
+
+<h1>Our Memories 💕</h1>
+
+<div class="frame">
+    <img id="slide" src="pic1.jpg">
+    <div class="overlay">Priya ❤️</div>
+</div>
+
+<br><br>
+
+<button onclick="window.location.href='final.html'"
+style="padding:10px;border-radius:10px;background:pink;color:white;">
+Next 💖
+</button>
+
+<script>
+
+// 🎬 SLIDESHOW
+let images = [
+"pic1.jpg","pic2.jpg","pic3.jpg","pic4.jpg","pic5.jpg",
+"pic6.jpg","pic7.jpg","pic8.jpg","pic9.jpg","pic10.jpg",
+"pic11.jpg","pic12.jpg","pic13.jpg","pic14.jpg","pic15.jpg"
+];
+
+let i = 0;
+
+setInterval(()=>{
+    i = (i + 1) % images.length;
+    let img = document.getElementById("slide");
+
+    img.style.opacity = 0;
+    setTimeout(()=>{
+        img.src = images[i];
+        img.style.opacity = 1;
+    },500);
+
+},3000);
+
+
+// ❤️ FLOATING HEARTS
+setInterval(()=>{
+    let h = document.createElement("div");
+    h.innerHTML="❤️";
+    h.className="heart";
+    h.style.left=Math.random()*100+"vw";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),6000);
+},300);
+
+</script>
+
+</body>
+</html>

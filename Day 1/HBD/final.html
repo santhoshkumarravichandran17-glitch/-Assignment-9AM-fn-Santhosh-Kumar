@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<style>
+body {
+    background: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    font-family: Arial;
+}
+
+h1 {
+    color: pink;
+}
+
+/* Floating hearts */
+.heart {
+    position: absolute;
+    animation: float 5s infinite;
+}
+
+@keyframes float {
+    from {transform: translateY(100vh);}
+    to {transform: translateY(-10vh);}
+}
+
+/* Button */
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background: pink;
+    color: white;
+}
+
+/* Hidden letter */
+#letter {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Name animation */
+.name {
+    font-size: 40px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {text-shadow: 0 0 10px pink;}
+    to {text-shadow: 0 0 30px white;}
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 class="name">PRIYA ❤️</h1>
+
+<h2>Happy Birthday 💖</h2>
+
+<!-- ⏳ LOVE TIMER -->
+<p id="timer"></p>
+
+<!-- 🎂 CAKE -->
+<div style="font-size:70px;cursor:pointer;" onclick="cutCake()">🎂</div>
+
+<p id="cakeMsg"></p>
+
+<br>
+
+<!-- 💌 SECRET LETTER -->
+<button onclick="showLetter()">Click if you love me 💌</button>
+
+<div id="letter">
+<p>
+Priya ❤️<br><br>
+Unna first time paatha moment la irundhu…<br>
+En life full ah change aayiduchu 💖<br><br>
+Nee siricha pothu dhaan enakku real happiness 😘<br><br>
+I promise…<br>
+Eppavum un kooda iruppen ❤️<br>
+</p>
+</div>
+
+<script>
+
+    
+
+
+// ⏳ LOVE TIMER (change date here)
+let startDate = new Date("2023-07-13");
+
+function updateTimer(){
+    let now = new Date();
+    let diff = now - startDate;
+
+    let days = Math.floor(diff / (1000*60*60*24));
+    document.getElementById("timer").innerHTML =
+    "We have been together for 💖 " + days + " days";
+
+    let years = Math.floor(days / 365);
+    let remainingDays = days % 365;
+    let months = Math.floor(remainingDays / 30);
+
+document.getElementById("timer").innerHTML =
+"We have been together for 💖 " 
++ years + " years " 
++ months + " months " 
++ (remainingDays % 30) + " days ❤️";
+}
+setInterval(updateTimer,1000);
+
+
+// 🎂 CAKE CLICK
+function cutCake(){
+    document.getElementById("cakeMsg").innerHTML =
+    "Cake cut panniten 🎂💖 I love you Priya ❤️";
+
+    alert("Will you stay with me forever? 💍");
+}
+
+
+// 💌 LETTER
+function showLetter(){
+    document.getElementById("letter").style.display = "block";
+}
+
+
+// ❤️ FLOATING HEARTS
+setInterval(()=>{
+    let h = document.createElement("div");
+    h.innerHTML="❤️";
+    h.className="heart";
+    h.style.left=Math.random()*100+"vw";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),5000);
+},300);
+
+
+// 📱 TOUCH EFFECT (mobile)
+document.addEventListener("click", function(e){
+    let heart = document.createElement("div");
+    heart.innerHTML="💖";
+    heart.style.position="absolute";
+    heart.style.left=e.clientX+"px";
+    heart.style.top=e.clientY+"px";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),1000);
+});
+
+</script>
+
+</body>
+</html>
